@@ -1,0 +1,94 @@
+/* Stilul general al meniului */
+nav {
+    background-color: #1e293b;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Elementele meniului principal */
+nav ul li {
+    position: relative;
+}
+
+/* Linkurile */
+nav a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Efect la trecerea mouse-ului */
+nav a:hover {
+    background-color: #334155;
+}
+
+/* Submeniurile sunt ascunse initial */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background-color: #1e293b;
+    flex-direction: column;
+    z-index: 10;
+}
+
+/* Afisam submeniul la hover sau la navigarea cu tastatura */
+nav ul li:hover > ul,
+nav ul li:focus-within > ul {
+    display: flex;
+}
+
+/* Stilizare generala a paginii */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+header h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 30px;
+    min-height: 60vh;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Adaptare pentru ecrane mici */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li ul {
+        position: static;
+    }
+
+    main {
+        padding: 15px;
+    }
+}

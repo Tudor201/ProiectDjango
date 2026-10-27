@@ -1,0 +1,43 @@
+{% extends "baza.html" %}
+{% load static %}
+
+{% block title %}
+Pagina principala - Dealership Auto
+{% endblock %}
+
+{% block content %}
+
+    <section id="prezentare">
+        <h2>Bine ati venit la Dealership Auto!</h2>
+        <p>
+            Proiectul meu este un dealership auto online in care utilizatorii vor putea 
+            vizualiza masinile disponibile pentru vanzare si informatii relevante despre 
+            fiecare autoturism, precum marca, modelul, anul fabricatiei, pretul, kilometrajul si alte caracteristici tehnice.
+        </p>
+
+        <img src="{% static 'imagini/dealership.jpg' %}"
+            alt="Autoturisme disponibile in dealership"
+            class="imagine-site">
+    </section>
+
+    <section id="recomandate">
+        <h2>Autoturisme recomandate</h2>
+        <p>Descoperiti autoturismele recomandate de noi.</p>
+    </section>
+
+    <section id="promotii">
+        <h2>Promotii</h2>
+        <p>Aici vor fi afisate promotiile disponibile.</p>
+    </section>
+
+    <section id="avantaje">
+        <h2>Avantajele noastre</h2>
+        <p>Oferim autoturisme variate si servicii de calitate.</p>
+    </section>
+
+    <section id="program">
+        <h2>Program de functionare</h2>
+        <p>Luni - Vineri: 09:00 - 18:00</p>
+    </section>
+
+{% endblock %}

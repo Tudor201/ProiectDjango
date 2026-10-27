@@ -1,0 +1,12 @@
+body{
+    background-color: bisque;
+}
+
+.imagine-site {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto;
+}

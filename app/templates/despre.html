@@ -1,0 +1,22 @@
+{% extends "baza.html" %}
+{% load static %}
+
+{% block title %}Despre noi{% endblock %}
+
+{% block content %}
+    <h2>Despre Dealership Auto</h2>
+
+    <section>
+        <h3>Cine suntem</h3>
+        <p>Suntem un dealership auto specializat in vanzarea autoturismelor.</p>
+        
+        <img src="{% static 'imagini/despre.jpg' %}"
+            alt="Showroom Dealership Auto"
+            class="imagine-site">
+    </section>
+
+    <section>
+        <h3>Misiunea noastra</h3>
+        <p>Ne propunem sa oferim clientilor autoturisme potrivite nevoilor lor.</p>
+    </section>
+{% endblock %}

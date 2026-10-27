@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/stil.css' %}">
+        <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+        <title>{% block title %}Dealership Auto{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <h1>Dealership Auto</h1>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url 'index' %}">Acasa</a>
+                        <ul>
+                            <li><a href="{% url 'index' %}#prezentare">Prezentare</a></li>
+                            <li><a href="{% url 'index' %}#recomandate">Autoturisme recomandate</a></li>
+                            <li><a href="{% url 'index' %}#promotii">Promotii</a></li>
+                            <li><a href="{% url 'index' %}#avantaje">Avantaje</a></li>
+                            <li><a href="{% url 'index' %}#program">Program</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="{% url 'despre' %}">Despre noi</a></li>
+                    <li><a href="{% url 'istoric' %}">Istoric</a></li>
+                    <li><a href="{% url 'produse' %}">Produse</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'cos_virtual' %}">Cos virtual</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+            <p>&copy; 2026 {{ firma.nume }}. Toate drepturile rezervate.</p>
+
+            <p>Anul infiintarii: {{ firma.an_infiintare }}</p>
+            <p>Telefon: {{ firma.telefon }}</p>
+            <p>Adresa: {{ firma.adresa }}</p>
+            <p>Email: {{ firma.email }}</p>
+            <p>Program: {{ firma.program }}</p>
+
+            <p>IP-ul tau: {{ request.ip }}</p>
+        </footer>
+    </body>
+</html>
